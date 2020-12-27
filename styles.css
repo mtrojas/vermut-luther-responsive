@@ -1,0 +1,264 @@
+/* variables */
+:root {
+  --font: #4a4747;
+  --background: #eae0d7;
+}
+
+/* reset */
+body,
+p,
+a,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+/* base styles */
+body {
+  background: var(--background);
+  overflow-x: hidden;
+  font-family: "Cormorant Garamond Light";
+}
+
+.button {
+  background: none;
+  border: 2px solid var(--font);
+  color: var(--font);
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+  display: inline-block;
+}
+
+.button:hover {
+  color: var(--background);
+  background: var(--font);
+}
+
+input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: solid;
+  background: rgba(255, 245, 238, 0.05);
+  padding: 10px 16px;
+  /* border-radius: 20px; */
+  /* border: 2px solid var(--font); */
+  color: var(--font);
+}
+
+input:focus {
+  outline: none !important;
+}
+
+input,
+button {
+  font-family: inherit;
+}
+
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* fonts */
+@font-face {
+  font-family: "Lobster Regular";
+  src: url("/assets/fonts/Lobster-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Abril Fatface Regular";
+  src: url("/assets/fonts/AbrilFatface-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Cormorant Garamond Light";
+  src: url("/assets/fonts/CormorantGaramond-Light.ttf");
+}
+
+@font-face {
+  font-family: "Andika Basic";
+  src: url("/assets/fonts/AndikaNewBasic-Regular.ttf");
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--font);
+  font-family: "Abril Fatface Regular";
+  font-weight: normal;
+}
+
+p,
+a,
+li {
+  color: #232b2b;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1.1em;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+i {
+  font-size: 3em;
+  color: var(--font);
+}
+
+.leading {
+  font-size: 1.1em;
+}
+/* mobile styles */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+}
+
+.site-nav {
+  margin: 0;
+}
+
+.site-nav ul {
+  display: none;
+}
+
+.grid .nav-logo {
+  grid-column: 1/13;
+  grid-row: 1;
+}
+
+#welcome {
+  padding: 0 0 0 0;
+}
+
+hr.welcome-hr {
+  overflow: visible; /* For IE */
+  height: 30px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px 0 0 0;
+  border-radius: 20px;
+}
+
+hr.welcome-hr:before {
+  display: block;
+  content: "";
+  height: 30px;
+  margin-top: -31px;
+  border-style: solid;
+  border-color: black;
+  border-width: 0 0 1px 0;
+  border-radius: 20px;
+}
+
+.grid .welcome-img {
+  grid-column: 1/13;
+  grid-row: 1;
+}
+
+.grid .welcome-text {
+  grid-column: 2/12;
+  grid-row: 2;
+  text-align: center;
+}
+
+#contact-us {
+  text-align: center;
+  padding: 10px 20px;
+  margin-bottom: 40px;
+}
+
+#contact-us h2 {
+  margin: 0 20px 30px 20px;
+}
+
+.contact a:nth-child(1) {
+  grid-column: 3/6;
+}
+
+.contact a:nth-child(2) {
+  grid-column: 7/12;
+}
+
+#subscribe {
+  display: none;
+  padding: 30px 20px;
+}
+
+#subscribe h3 {
+  text-align: center;
+}
+
+#subscribe form {
+  width: 80%;
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+#subscribe button {
+  margin-left: 10px;
+}
+
+#instagram {
+  background: var(--background);
+}
+
+footer {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+footer .copyright {
+  font-size: 0.8em;
+  color: var(--font);
+  font-family: "Andika Basic";
+}
+
+/* small tablet styles */
+@media screen and (min-width: 620px) {
+  img {
+    width: auto;
+    max-width: 100%;
+    max-height: 50%;
+  }
+
+  .contact a:nth-child(1) {
+    grid-column: 4/7;
+  }
+
+  .contact a:nth-child(2) {
+    grid-column: 8/11;
+  }
+}
+
+/* large tablet & laptop styles */
+@media screen and (min-width: 960px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* desktop styles */
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
+}
