@@ -262,6 +262,10 @@ footer .copyright {
     box-sizing: border-box;
   }
 
+  .welcome-img {
+    text-align: center;
+  }
+
   .grid .welcome-text {
     grid-column: 3/11;
   }
