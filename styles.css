@@ -305,4 +305,8 @@ footer .copyright {
   body {
     font-size: 20px;
   }
+
+  #welcome #contact-us {
+    padding: 90px 0;
+  }
 }
